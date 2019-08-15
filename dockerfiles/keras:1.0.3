@@ -1,0 +1,27 @@
+# Version 1.0.3 with updates for Keras and Tensorflow
+# Use an official ubuntu runtime as a parent image
+FROM ubuntu:16.04
+
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    vim \
+    build-essential \
+    cmake \
+    curl \
+    git \
+    libgoogle-glog-dev \
+    libprotobuf-dev \
+    python-pip \
+    protobuf-compiler \
+    python-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install some python packages
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir future hypothesis numpy protobuf six
+
+# keras installation with newest versions
+RUN pip install --upgrade h5py==2.8.0 \
+  tensorflow==1.14.0 \
+  keras==2.2.4 \
+  matplotlib

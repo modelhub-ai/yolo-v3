@@ -1,0 +1,9 @@
+{
+  "docker_id": "cberger/keras-modelhub:1.0.3",
+  "external_contrib_files": [
+    {
+      "src_url": "https://github.com/christophbrgr/yolov3/releases/download/v0.9/model.h5",
+      "dest_file_path": "contrib_src/model/model.h5"
+    }
+  ]
+}
