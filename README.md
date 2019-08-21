@@ -1,51 +1,36 @@
-# Modelhub Implementation of YOLOv3 Object Detection
-based on https://github.com/experiencor/keras-yolo3 and https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras/
-
-# Model Template
-
-Template repository as base to create a new model that can be plugged into modelhub.ai.
-
-
-## How to use this template to contribute your model to modelhub.ai
-
-Fork this repository and rename it. Choose a name that apropriately describes your model in a conciese way.
-
-Fill in the template files and folders with your code, model, and sample data.
-
-To publish your model with modelhub.ai, clone https://github.com/modelhub-ai/modelhub, add your model to the model index list "models.json", and create a pull request. If your model passes our basic tests, we will accept the pull requst and your model will be available via modelhub.ai.
-
-For a more detailed guide on how to contribute your model to modelhub, see [Contribute Your Own Model to Modelhub](http://modelhub.readthedocs.io/en/latest/contribute.html) in the offical [Modelhub Documentation](http://modelhub.readthedocs.io).
-
-
-## License
-
-We release the code of this model-template repository (https://github.com/modelhub-ai/model-template) under the UNLICENSE (see full text below). We do this so you can fork and use this template as basis for your own models, and release them under any license you want, without restrictions and without even giving credit to modelhub.ai (we're happy if you do so anyway, of course). To be clear: You can completely remove the UNLICENSE from your fork/copy of this repository and instead add any license you like!
-
-After you forked (and renamed) this repository we advice you to immediately delete the README.md file (or at least any text herein regarding licensing - you don't want the UNLICENSE to lurk around when you are intending to release your model under a different license). Then add the licence you want to use for your models into the "contrib_src/license/model" file. Also add the license and copyright notice for your sample data to the "contrib_src/license/samples" file. If you want to add the model to the modelhub.ai model collection, you of course have to make sure, that your license allows modelhub.ai to use your model.
-
-### The UNLICENSE for the model-template repository (https://github.com/modelhub-ai/model-template):
-
-This is free and unencumbered software released into the public domain.
-
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
-
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <http://unlicense.org>
+# YOLOv3
+This repository hosts the contributor source files for the YOLOv3 model. ModelHub integrates these files into an engine and controlled runtime environment. A unified API allows for out-of-the-box reproducible implementations of published models. For more information, please visit [www.modelhub.ai](http://modelhub.ai/) or contact us [info@modelhub.ai](mailto:info@modelhub.ai).
+## meta
+| | |
+|-|-|
+| id | d9564b79-1f1a-4ac4-891d-2767a0d6bc95 | 
+| application_area | Object Detection | 
+| task | Object Detection | 
+| task_extended | Object Detection | 
+| data_type | Image/Photo | 
+| data_source | http://cocodataset.org/#download | 
+## publication
+| | |
+|-|-|
+| title | YOLOv3: An Incremental Improvement | 
+| source | arXiv | 
+| url | https://arxiv.org/abs/1804.02767 | 
+| year | 2018 | 
+| authors | Joseph Redmon, Ali Farhadi | 
+| abstract | We present some updates to YOLO! We made a bunch of little design changes to make it better. We also trained this new network that's pretty swell. It's a little bigger than last time but more accurate. It's still fast though, don't worry. At 320x320 YOLOv3 runs in 22 ms at 28.2 mAP, as accurate as SSD but three times faster. When we look at the old .5 IOU mAP detection metric YOLOv3 is quite good. It achieves 57.9 mAP@50 in 51 ms on a Titan X, compared to 57.5 mAP@50 in 198 ms by RetinaNet, similar performance but 3.8x faster. As always, all the code is online at this https URL | 
+| google_scholar | https://scholar.google.com/scholar?cites=12589619088479868341&as_sdt=40000005&sciodt=0,22&hl=en | 
+| bibtex | @article{DBLP:journals/corr/abs-1804-02767, author    = {Joseph Redmon and Ali Farhadi}, title     = {YOLOv3: An Incremental Improvement},journal   = {CoRR}, volume    = {abs/1804.02767}, year      = {2018}, url       = {http://arxiv.org/abs/1804.02767}, archivePrefix = {arXiv}, eprint    = {1804.02767}, timestamp = {Mon, 13 Aug 2018 16:48:24 +0200}, biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1804-02767}, bibsource = {dblp computer science bibliography, https://dblp.org}} | 
+## model
+| | |
+|-|-|
+| description | You only look once (YOLO) is a state-of-the-art, real-time object detection system.  | 
+| provenance | https://github.com/experiencor/keras-yolo3 | 
+| architecture | Convolutional Neural Network (CNN) | 
+| learning_type | Supervised Learning | 
+| format | .h5 | 
+| I/O | model I/O can be viewed [here](contrib_src/model/config.json) | 
+| license | model license can be viewed [here](contrib_src/license/model) | 
+## run
+To run this model and view others in the collection, view the instructions on [ModelHub](http://app.modelhub.ai/).
+## contribute
+To contribute models, visit the [ModelHub docs](https://modelhub.readthedocs.io/en/latest/).
